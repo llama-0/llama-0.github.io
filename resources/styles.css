@@ -1,3 +1,7 @@
 .img-circle {
   border-radius: 50%;
 }
+
+.img-half-circle {
+  border-radius: 35%;
+}
