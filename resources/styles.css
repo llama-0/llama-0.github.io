@@ -5,3 +5,7 @@
 .img-half-circle {
   border-radius: 45%;
 }
+
+body {
+    background-image: url("Limon.png");  
+}
