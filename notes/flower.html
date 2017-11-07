@@ -48,7 +48,15 @@ table {
 }
 
 img {
-	z-index: 3;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+.imgA1 {
+  z-index: 1;
+}
+.imgB1 {
+  z-index: 3;
 }
 </style>
 </head>
@@ -100,8 +108,8 @@ img {
     </th>
     <th>
     <div class="card">
-		<img src="/resources/6.jpg" style="width:100%">
-		<img class="img" src="/resources/hit.png">
+		<img class="imgA1" src="/resources/6.jpg" style="width:100%">
+		<img class="imgB1" src="/resources/hit.png">
   		<h4>Букет Хризантемы 35см (Россия)</h4>
   		<p>1250 &#8381; </p>
  		<p><button type="button"><img src="/resources/add_to_cart_icon.png" width="50px" length="200px">Купить</button></p>
