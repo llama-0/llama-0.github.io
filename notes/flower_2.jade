@@ -1,7 +1,13 @@
-mixin card(img_name, title, cost)
+mixin card(img_name, title, cost, hit, sale)
+	- hit = hit || false
+	- sale = sale || false
 	div.card
 		img.flower-picture(src="/resources/" + img_name)
-		h4 #{title}
+		if hit
+			img.img_hit(src="/resources/hit.png")
+		if sale
+			img.img_sale(src="/resources/sale.png")
+		h4 !{title}
 		p #{cost} &#8381;
 		p: button: img(src="/resources/add_to_cart.png", width="50px", height="50px")
 
@@ -12,12 +18,12 @@ html
 	body: table
 		tr
 			td: +card("3.jpg", "Розы в корзинке Нежный Щербет 25см (Эквадор)", 2500)
-			td: +card("2.jpg", "Букет Ромашки Новозеландские", 1650)
-			td: +card("4.jpg", "Букет Ромашки Новозеландские", 1650)
-			td: +card("11.jpg", "Букет Ромашки Новозеландские", 1650)
+			td: +card("2.jpg", "Букет из Элитных Белых Роз 35см (Голландия)", 1950, true)
+			td: +card("4.jpg", "Букет Ромашки Новозеландские <br>30 см (Новая Зеландия)</br>", 1650, false, true)
+			td: +card("11.jpg", "Букет из Белых и Красных Роз 35см (Голландия)", 2500)
 		tr
-			td: +card("4.jpg", "Букет Ромашки Новозеландские", 1650)
-			td: +card("4.jpg", "Букет Ромашки Новозеландские", 1650)
-			td: +card("4.jpg", "Букет Ромашки Новозеландские", 1650)
-			td: +card("4.jpg", "Букет Ромашки Новозеландские", 1650)
+			td: +card("1.jpg", "Букет Красные Розы 40см (Голландия/Эквадор)", 2100, false, true)
+			td: +card("5.jpg", "Букет из Ирисов 25см (Россия)", 1700, false)
+			td: +card("6.jpg", "Букет Хризантемы 35см (Россия)", 1250, false, true)
+			td: +card("9.jpg", "Букет Герберы и Розы Дуо 35см (Голландия)", 1800, false)
 			
